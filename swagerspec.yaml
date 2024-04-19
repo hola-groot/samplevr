@@ -1,0 +1,84 @@
+openapi: 3.0.0
+info:
+  title: Sample API
+  version: 1.0.0
+  description: Sample API for managing users, products, and orders
+paths:
+  /users:
+    get:
+      summary: Get all users
+      responses:
+        '200':
+          description: Successful response
+        '404':
+          description: Not found
+        '500':
+          description: Internal server error
+  /users/{userId}:
+    get:
+      summary: Get user by ID
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+        '404':
+          description: Not found
+        '500':
+          description: Internal server error
+  /products:
+    get:
+      summary: Get all products
+      responses:
+        '200':
+          description: Successful response
+        '404':
+          description: Not found
+        '500':
+          description: Internal server error
+  /products/{productId}:
+    get:
+      summary: Get product by ID
+      parameters:
+        - name: productId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+        '404':
+          description: Not found
+        '500':
+          description: Internal server error
+  /orders:
+    get:
+      summary: Get all orders
+      responses:
+        '200':
+          description: Successful response
+        '404':
+          description: Not found
+        '500':
+          description: Internal server error
+  /orders/{orderId}:
+    get:
+      summary: Get order by ID
+      parameters:
+        - name: orderId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+        '404':
+          description: Not found
+        '500':
+          description: Internal server error
